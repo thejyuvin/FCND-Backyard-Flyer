@@ -21,8 +21,20 @@ drone.set_home_position(drone.global_position[0],
                         drone.global_position[1], 
                         drone.global_position[2])
 
-drone.takeoff(3)
+drone.takeoff(1)
+time.sleep(5)
+drone.cmd_position(0,0,3, 0)
+time.sleep(5)
+drone.cmd_position(0,10,3, 0)
+time.sleep(5)
+drone.cmd_position(10,10,3, 0)
+time.sleep(5)
+drone.cmd_position(10,0,3, 0)
+time.sleep(5)
+drone.cmd_position(0,0,3, 0)
+time.sleep(5)
+drone.cmd_position(0,0,3, 0)
+time.sleep(5)
 
-drone.takeoff(0)
 drone.disarm()
 drone.stop()
